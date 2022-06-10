@@ -1,0 +1,37 @@
+services:
+  web:
+    build: ./src/client
+    container_name: web
+    depends_on:
+      - "app"
+    ports:
+      - 3000:3000
+
+  app:
+    build: .
+    container_name: app
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+    restart: on-failure
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: vragu
+    healthcheck:
+      test: "exit 0"
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 9000:8080

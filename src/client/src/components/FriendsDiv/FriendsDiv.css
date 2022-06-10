@@ -1,0 +1,49 @@
+
+.friendList {
+    width: 25%;
+    padding: 20px;
+    overflow: auto;
+}
+
+.friendList h1 {
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50%;
+}
+
+.friendContent {
+    display: block;
+    padding: 15px;
+    border-radius: 25px;
+    border: 2px solid gray;
+    margin-top: 15px;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+.currentFriend {
+    border-color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.friendContent:hover {
+    border-color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.friendList::-webkit-scrollbar {
+    width: 3pt;
+}
+
+.friendList::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.friendList::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}

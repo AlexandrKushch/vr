@@ -1,2 +1,1 @@
-# vr
-Own messanger
+# own-messanger

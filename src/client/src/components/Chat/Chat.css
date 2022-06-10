@@ -1,0 +1,14 @@
+
+.chat {
+    /* position: relative; */
+    display: block;
+}
+
+.chat h1 {
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50%;
+}

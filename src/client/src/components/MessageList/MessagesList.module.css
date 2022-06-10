@@ -1,0 +1,115 @@
+
+.messagesList {
+    margin-top: 30px;
+    max-height: 800px;
+    overflow: auto;
+}
+
+.messagesList::-webkit-scrollbar {
+    width: 3pt;
+}
+
+.messagesList::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.messagesList::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+@media (max-height: 1101px) {
+    .messagesList {
+        height: 980px;
+    }
+}
+
+@media (max-height: 1051px) {
+    .messagesList {
+        height: 930px;
+    }
+}
+
+@media (max-height: 1001px) {
+    .messagesList {
+        height: 880px;
+    }
+}
+
+@media (max-height: 950px) {
+    .messagesList {
+        height: 830px;
+    }
+}
+
+@media (max-height: 920px) {
+    .messagesList {
+        height: 780px;
+    }
+}
+
+@media (max-height: 851px) {
+    .messagesList {
+        height: 730px;
+    }
+}
+
+@media (max-height: 801px) {
+    .messagesList {
+        height: 680px;
+    }
+}
+
+@media (max-height: 750px) {
+    .messagesList {
+        height: 630px;
+    }
+}
+
+@media (max-height: 700px) {
+    .messagesList {
+        height: 580px;
+    }
+}
+
+@media (max-height: 653px) {
+    .messagesList {
+        height: 530px;
+    }
+}
+
+@media (max-height: 600px) {
+    .messagesList {
+        height: 480px;
+    }
+}
+
+@media (max-height: 550px) {
+    .messagesList {
+        height: 430px;
+    }
+}
+
+@media (max-height: 501px) {
+    .messagesList {
+        height: 380px;
+    }
+}
+
+@media (max-height: 450px) {
+    .messagesList {
+        height: 330px;
+    }
+}
+
+@media (max-height: 401px) {
+    .messagesList {
+        height: 280px;
+    }
+}
+
+@media (max-height: 350px) {
+    .messagesList {
+        height: 230px;
+    }
+}

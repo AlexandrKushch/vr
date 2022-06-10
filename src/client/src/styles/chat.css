@@ -1,0 +1,87 @@
+@import "../components/FriendsDiv/FriendsDiv.css";
+@import "../components/Chat/Chat.css";
+@import "../components/UI/Burger/Burger.css";
+
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+.Home h1 {
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    min-width: 1200px;
+}
+
+.chat {
+    width: 70%;
+}
+
+.menu__btn {
+    display: none;
+}
+
+@media (max-width: 1199px) {
+    .content {
+        min-width: 960px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .content {
+        min-width: 960px;
+    }
+}
+
+@media (max-width: 991px) {
+    .content {
+        min-width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        min-width: 540px;
+    }
+
+    .friendList {
+        display: none;
+    }
+    
+    .chat {
+        width: 100%;
+    }
+
+    .menu__btn {
+        display: flex;
+    }
+
+    #menu__toggle:checked ~.content>.friendList {
+        display: block;
+        width: 80%;
+    }
+    #menu__toggle:checked ~.content>.chat {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .content {
+        min-width: 320px;
+    }
+}
+
+@media (max-width: 320px) {
+    .content {
+        min-width: 220px;
+    }
+}

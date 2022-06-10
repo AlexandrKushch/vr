@@ -1,0 +1,23 @@
+
+.message {
+    display: block;
+    max-width: 200px;
+    /* width: fit-content;
+    min-width: 200px;
+    max-width: 400px; */
+    padding: 15px;
+    border-radius: 25px;
+    border: 2px solid white;
+    margin-top: 15px;
+}
+
+.messageRight {
+    border-color: gray;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.contentRight {
+    color: gray;
+    text-align: left;
+}

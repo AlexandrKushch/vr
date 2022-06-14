@@ -2,8 +2,6 @@ services:
   web:
     build: ./src/client
     container_name: web
-    depends_on:
-      - "app"
     ports:
       - 3000:3000
 
@@ -15,7 +13,6 @@ services:
         condition: service_healthy
     ports:
       - 8080:8080
-    restart: on-failure
 
   db:
     image: mysql
@@ -29,9 +26,3 @@ services:
       - 3306:3306
     expose:
       - 3306
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 9000:8080

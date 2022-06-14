@@ -3,6 +3,8 @@ package com.khpi.vr.controller;
 import com.khpi.vr.domain.User;
 import com.khpi.vr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpCookie;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,11 +20,11 @@ public class RegisterController {
     }
 
     @PutMapping
-    public ResponseEntity enrollUser(@RequestBody User user) {
+    public ResponseEntity<?> enrollUser(@RequestBody User user) {
         if (userService.findByUsername(user.getUsername()) == null) {
             return ResponseEntity.ok(userService.enrollUser(user));
         }
 
-        return (ResponseEntity) ResponseEntity.status(409);
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(user);
     }
 }

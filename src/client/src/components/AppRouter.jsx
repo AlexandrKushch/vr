@@ -6,11 +6,14 @@ import SockJS from 'sockjs-client'
 import Stomp from 'stompjs'
 
 const AppRouter = () => {
+    const ROOT_URL = "http://vr-env.eba-whe5ngp5.us-east-1.elasticbeanstalk.com";
+    const LOCALHOST = "http://localhost:8080";  
+
     const { currentUserId } = useContext(CurrentUserContext);
     const { setStompClient } = useContext(StompClientContext)
 
     useEffect(() => {
-        const sock = new SockJS("http://localhost:8080/ws");
+        const sock = new SockJS(LOCALHOST + "/ws");
         setStompClient(Stomp.over(sock));
     }, [currentUserId])
 
